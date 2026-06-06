@@ -210,6 +210,36 @@
         <h2 class="copy-right">© 2026 Bella Vista. Crafted by Madan Sharma.</h2>
     </footer>
 
+    <div class="popup">
+        <div class="hello">
+            <span>Welcome To</span>
+            <h1>Bella Vista</h1>
+            <p>Experience authentic flavors, elegant ambiance, and unforgettable dining moments.</p>
+        </div>
+    </div>
+
+    <script>
+
+        const popup = document.querySelector(".popup");
+
+
+        document.body.style.overflow = "hidden";
+
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                popup.classList.add("hide");
+
+                // Enable scrolling again
+                document.body.style.overflow = "auto";
+
+                // Completely remove popup after animation
+                setTimeout(() => {
+                    popup.remove();
+                }, 500);
+
+            }, 2000);// for 2 s
+        });
+    </script>
 </body>
 
 </html>
